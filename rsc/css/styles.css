@@ -1,0 +1,1612 @@
+/* === FORGOTTEN ISLAND - COMPLETE STYLESHEET === */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* == COLOR SCHEME VARIABLES == */
+:root {
+    --palm-green: #237A4B;
+    --ocean-blue: #168AAD;
+    --sunny-yellow: #FFD166;
+    --crimson-red: #C62845;
+    --deep-purple: #32105B;
+    --tropical-teal: #12B8AD;
+    --light-sand: #FFF1D6;
+    --white: #FFFFFF;
+    --tropical-pink: #F56BAA;
+    --lavender-dusk: #B9A1E8;
+    --dark-text: #261A35;
+
+    --hero-video-position: 50% 44%;
+    --page-transition-duration: 260ms;
+}
+
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    background: var(--light-sand);
+    opacity: 1;
+    animation: islandPageEnter 380ms ease both;
+    transition: opacity var(--page-transition-duration) ease,
+                transform var(--page-transition-duration) ease;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+a {
+    text-decoration: none;
+}
+img, video {
+    max-width: 100%;
+}
+
+/* === NAVIGATION BAR === */
+.island-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    width: 100%;
+    padding: 18px 0;
+    background: rgba(35, 10, 67, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+.navbar-brand {
+    color: var(--white) !important;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+.navbar-brand span {
+    color: var(--tropical-teal);
+}
+.navbar-nav .nav-link {
+    margin-left: 15px;
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--sunny-yellow) !important;
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(255, 209, 102, 0.3);
+}
+/* NAVIGATION BUTTONS */
+.cart-nav-btn {
+    padding: 10px 17px;
+    border: 0;
+    border-radius: 30px;
+    background: var(--sunny-yellow);
+    color: var(--deep-purple);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+.cart-nav-btn:hover {
+    background: var(--tropical-pink);
+    transform: translateY(-2px);
+}
+
+/* === BUTTONS === */
+.btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: transform 0.25s ease, background 0.25s ease,
+                border-color 0.25s ease, color 0.25s ease;
+}
+.btn-sunset {
+    border: 2px solid var(--sunny-yellow);
+    background: var(--sunny-yellow);
+    color: var(--deep-purple);
+}
+.btn-sunset:hover, .btn-sunset:focus-visible {
+    border-color: var(--tropical-pink);
+    background: var(--tropical-pink);
+    color: #fff;
+    transform: translateY(-3px);
+}
+.btn-purple {
+    border: 2px solid var(--deep-purple);
+    background: var(--deep-purple);
+    color: #fff;
+}
+.btn-purple:hover, .btn-purple:focus-visible {
+    border-color: var(--tropical-teal);
+    background: var(--tropical-teal);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* === HOMEPAGE HERO WITH VIDEO BACKGROUND AND NEON TITLE === */
+.hero-section {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #160D2C;
+}
+.hero-section .hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--hero-video-position);
+}
+.hero-section .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 7, 36, 0.70) 0%,
+            rgba(16, 7, 36, 0.40) 50%,
+            rgba(16, 7, 36, 0.58) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(16, 7, 36, 0.25) 0%,
+            rgba(16, 7, 36, 0.08) 48%,
+            rgba(16, 7, 36, 0.76) 100%
+        );
+}
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 135px 12px 125px;
+    text-align: center;
+}
+.hero-label {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+/* NEON HERO TITLE */
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 25px 0;
+    overflow: visible;
+    font-family: 'Arial Black', 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: 3px;
+    text-align: center;
+    transform: none;
+}
+/* TURQUOISE FORGOTTEN TEXT */
+.forgotten-word {
+    color: transparent;
+    font-size: clamp(2.5rem, 8vw, 5.8rem);
+    -webkit-text-stroke: 2px #00F5ED;
+    text-shadow:
+        0 0 5px #00FFF2,
+        0 0 12px #00E5FF,
+        0 0 25px rgba(0, 255, 255, 0.8),
+        0 0 45px rgba(0, 255, 255, 0.5);
+}
+/* PINK-PURPLE ISLAND TEXT */
+.island-word {
+    display: inline-block;
+    width: max-content;
+    max-width: 100%;
+    padding-right: 0.14em;
+    margin-right: -0.14em;
+    white-space: nowrap;
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 5%,
+        #FFD8FF 25%,
+        #FF69F5 55%,
+        #E000FF 85%,
+        #A000FF 100%
+    );
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(3.5rem, 12vw, 8.5rem);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 130, 255, 0.8);
+    filter:
+        drop-shadow(0 0 5px #FF00E6)
+        drop-shadow(0 0 12px #FF00E6)
+        drop-shadow(0 0 25px rgba(204, 0, 255, 0.9))
+        drop-shadow(0 0 40px rgba(255, 0, 200, 0.7));
+}
+.hero-description {
+    display: block;
+    width: 100%;
+    margin: 18px 0 25px;
+    color: #fff;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+.hero-buttons {
+    align-items: center;
+    justify-content: center;
+}
+.hero-section .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.hero-section .scroll-indicator p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* === INNER PAGE HERO Characters and Products pages === */
+.inner-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+    padding: 140px 15px 70px;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(32, 8, 60, 0.70),
+            rgba(32, 8, 60, 0.84)
+        ),
+        url('../../media/img/poster.jpg') center / cover no-repeat;
+}
+.inner-hero > .container {
+    position: relative;
+    z-index: 1;
+}
+.inner-hero h1 {
+    margin: 15px 0;
+    font-size: clamp(42px, 7vw, 80px);
+    letter-spacing: -2px;
+}
+.inner-hero p {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+/* CHARACTERS PAGE BANNER */
+.character-hero {
+    position: relative;
+    min-height: max(65vh, calc(100vw / 3));
+    background-color: #241044;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(25, 7, 48, 0.78) 0%,
+            rgba(25, 7, 48, 0.48) 50%,
+            rgba(25, 7, 48, 0.75) 100%
+        ),
+        url("../../media/img/characters-hero.jpg");
+    background-size: 100% 100%, 100% 100%;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* PRODUCTS PAGE BANNER */
+.shop-hero {
+    position: relative;
+    background-color: #241044;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(25, 7, 48, 0.78) 0%,
+            rgba(25, 7, 48, 0.50) 50%,
+            rgba(25, 7, 48, 0.78) 100%
+        ),
+        url("../../media/img/products-hero.jpg");
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* === SECTION BACKGROUNDS === */
+.section-padding {
+    position: relative;
+    padding: 100px 0;
+}
+/* LIGHT SAND SECTION */
+.sand-section, .product-section {
+    background-color: var(--light-sand);
+    background-image:
+        radial-gradient(
+            ellipse at 8% 12%,
+            rgba(18, 184, 173, 0.09),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 92% 88%,
+            rgba(245, 107, 170, 0.10),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #FFF6E5 0%,
+            #FFF1D6 55%,
+            #F8EBF3 100%
+        );
+}
+
+/* OCEAN BLUE SECTIONS */
+.ocean-section {
+    background-color: #105B82;
+    background-image:
+        radial-gradient(
+            ellipse at 12% 18%,
+            rgba(18, 184, 173, 0.27),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 88% 82%,
+            rgba(185, 161, 232, 0.16),
+            transparent 38%
+        ),
+        repeating-linear-gradient(
+            132deg,
+            transparent 0 105px,
+            rgba(255, 255, 255, 0.035) 106px 107px,
+            transparent 108px 190px
+        ),
+        linear-gradient(
+            130deg,
+            #0B344D 0%,
+            #126B83 48%,
+            #241044 100%
+        );
+}
+
+/* PROTAGONISTS SECTION */
+.character-section {
+    background-color: #241044;
+    background-image:
+        radial-gradient(
+            ellipse at 16% 22%,
+            rgba(86, 48, 137, 0.42),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 86% 76%,
+            rgba(18, 184, 173, 0.15),
+            transparent 40%
+        ),
+        repeating-linear-gradient(
+            128deg,
+            transparent 0 115px,
+            rgba(255, 255, 255, 0.035) 116px 117px,
+            transparent 118px 210px
+        ),
+        linear-gradient(
+            135deg,
+            #32105B 0%,
+            #241044 58%,
+            #101A36 100%
+        );
+}
+
+/* ANTAGONIST SECTION */
+.antagonist-section {
+    background-color: #35102F;
+    background-image:
+        radial-gradient(
+            ellipse at 18% 24%,
+            rgba(198, 40, 69, 0.25),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 84% 78%,
+            rgba(128, 40, 105, 0.25),
+            transparent 42%
+        ),
+        repeating-linear-gradient(
+            132deg,
+            transparent 0 120px,
+            rgba(255, 255, 255, 0.03) 121px 122px,
+            transparent 123px 220px
+        ),
+        linear-gradient(
+            135deg,
+            #241044 0%,
+            #42143C 55%,
+            #170D2C 100%
+        );
+}
+
+/* PRODUCTION CREDITS SECTION */
+.credits-section {
+    background-color: #F7DCEB;
+    background-image:
+        radial-gradient(
+            ellipse at 12% 16%,
+            rgba(185, 161, 232, 0.26),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 88% 84%,
+            rgba(245, 107, 170, 0.13),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #F9E7EF 0%,
+            #F7DCEB 55%,
+            #EEE3FA 100%
+        );
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+    margin-bottom: 35px;
+}
+.section-heading h2,
+.section-padding h2 {
+    margin: 12px 0;
+    font-size: clamp(26px, 4vw, 42px);
+}
+.section-heading p {
+    color: #777;
+}
+.highlight-section .section-heading p,
+.character-section .section-heading p,
+.antagonist-section .section-heading p,
+.ocean-section .section-heading p {
+    color: rgba(255, 255, 255, 0.78);
+}
+.section-tag {
+    display: inline-block;
+    color: var(--tropical-teal);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.purple-text {
+    color: var(--deep-purple);
+}
+.content-width {
+    max-width: 720px;
+}
+
+/* === SECTION-TO-SECTION COLOR BLENDS === */
+/* HOMEPAGE TRANSITIONS */
+/* 1. Hero -> Movie information */
+.hero-section + .sand-section,
+.hero-section + .sanf-section {
+    --section-blend-from: #160D2C;
+}
+
+/* Movie information -> Highlights */
+.sand-section + .highlight-section,
+.sanf-section + .highlight-section {
+    --section-blend-from: #FFF1D6;
+}
+
+/* Highlights -> Synopsis */
+.highlight-section + .ocean-section {
+    --section-blend-from: #105B82;
+}
+
+/* Synopsis -> Voice cast */
+.ocean-section + .sand-section,
+.ocean-section + .sanf-section {
+    --section-blend-from: #168AAD;
+}
+
+/* Voice cast -> Production credits */
+.sand-section + .credits-section,
+.sanf-section + .credits-section {
+    --section-blend-from: #FFF1D6;
+}
+
+/* === FOOTER VERTICAL GRADIENT TRANSITIONS === */
+.island-footer,
+.island-fooder {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.island-footer::before,
+.island-fooder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        var(--footer-blend-from, transparent) 0%,
+        transparent 100%
+    );
+}
+.island-footer > .container,
+.island-fooder > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cinema -> Footer */
+#cinema + .island-footer,
+#cinema + .island-fooder {
+    --footer-blend-from: #241044;
+}
+
+/* Antagonist -> Footer */
+.antagonist-section + .island-footer,
+.antagonist-section + .island-fooder {
+    --footer-blend-from: #42143C;
+}
+
+/* Products -> Footer */
+.product-section ~ .island-footer,
+.product-section ~ .island-fooder {
+    --footer-blend-from: #FFF1D6;
+}
+
+/* === MOVIE INFORMATION === */
+.movie-poster {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    border: 5px solid #fff;
+    border-radius: 15px;
+}
+.movie-details {
+    display: grid;
+    gap: 12px;
+    font-size: 14px;
+}
+.movie-details div {
+    padding: 10px 15px;
+    border-left: 4px solid var(--tropical-teal);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+/* === HIGHLIGHT CARDS === */
+.highlight-card {
+    height: 100%;
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.highlight-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+}
+.highlight-card i {
+    color: var(--sunny-yellow);
+    font-size: 45px;
+}
+.highlight-card h4 {
+    margin: 20px 0 12px;
+    font-size: 17px;
+}
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+}
+
+/* === STORY/ SYNOPSIS IMAGE === */
+.story-image img {
+    width: 100%;
+    min-height: 320px;
+    max-height: 460px;
+    border: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* === VOICE CAST CARDS === */
+.cast-card, .cost-card {
+    height: 100%;
+    padding: 25px 15px;
+    border-bottom: 4px solid var(--tropical-teal);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.cast-card:hover, .cost-card:hover {
+    transform: translateY(-7px);
+}
+.cast-card h5, .cost-card h5 {
+    color: var(--deep-purple);
+    font-size: 15px;
+}
+.cast-card p, .cost-card p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+}
+
+/* === PRODUCTION CREDITS === */
+.credits-section h2 {
+    color: var(--deep-purple);
+}
+.credits-section h5 {
+    color: var(--crimson-red);
+    font-size: 14px;
+}
+.credits-section p {
+    line-height: 1.9;
+}
+
+/* === CINEMA LINKS === */
+.cinema-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 100%;
+    padding: 30px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.045);
+    transition: background 0.3s ease, color 0.3s ease,
+                transform 0.3s ease;
+}
+.cinema-link:hover {
+    background: var(--sunny-yellow);
+    color: var(--deep-purple);
+    transform: translateY(-5px);
+}
+.cinema-link i {
+    color: var(--sunny-yellow);
+    font-size: 32px;
+}
+.cinema-link:hover i {
+    color: var(--deep-purple);
+}
+.cinema-link span {
+    font-weight: 800;
+}
+.cinema-link small {
+    opacity: 0.8;
+}
+
+/* === CHARACTER CARDS === */
+.character-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.character-card:hover {
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+}
+.character-img, .character-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        var(--lavender-dusk),
+        var(--ocean-blue)
+    );
+}
+.character-img img, .character-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+.character-card:hover .character-img img,
+.character-card:hover .character-image img {
+    transform: scale(1.06);
+}
+.character-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: var(--tropical-teal);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.villain-label {
+    background: var(--crimson-red);
+}
+.character-content, .character-cntent {
+    flex: 1;
+    padding: 28px;
+}
+.character-content h3, .character-cntent h3 {
+    color: var(--deep-purple);
+    font-size: 25px;
+}
+.voice-name {
+    color: var(--tropical-teal);
+    font-size: 13px;
+    font-weight: 700;
+}
+.character-content p:last-child,
+.character-cntent p:last-child {
+    margin-bottom: 0;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.9;
+}
+.villain-card {
+    border: 3px solid var(--crimson-red);
+}
+
+/* ADDITIONAL CHARACTER CARD IMPROVEMENTS */
+.character-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.character-content h3 {
+    margin-bottom: 8px;
+}
+.character-content .voice-name {
+    margin-bottom: 14px;
+}
+.character-content p:last-child {
+    flex: 1;
+}
+
+/* === PRODUCTS AND MERCHANDISE CARDS === */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(50, 16, 91, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+.product-card:hover {
+    box-shadow: 0 12px 25px rgba(50, 16, 91, 0.16);
+}
+.product-card > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    object-fit: contain;
+    object-position: center;
+    transition: none;
+}
+.product-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 17px;
+}
+.product-category {
+    color: var(--tropical-teal);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.product-info h5 {
+    min-height: 36px;
+    margin: 9px 0;
+    color: var(--deep-purple);
+    font-size: 14px;
+}
+.product-info p {
+    flex: 1;
+    min-height: 35px;
+    margin-bottom: 12px;
+    color: #777;
+    font-size: 11px;
+}
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+.product-bottom strong {
+    color: var(--palm-green);
+    font-size: 14px;
+}
+.add-cart {
+    display: inline-flex;
+    flex: 0 0 35px;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sunny-yellow);
+    color: var(--deep-purple);
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease,
+                transform 0.3s ease;
+}
+.add-cart:hover {
+    background: var(--tropical-teal);
+    color: #fff;
+    transform: rotate(90deg);
+}
+.add-cart:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+/* === SHOPPING CART === */
+.cart-toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1090;
+    max-width: calc(100vw - 32px);
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: var(--deep-purple);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(12px);
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.cart-toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.card-header, .cart-header {
+    background: var(--deep-purple);
+    color: #fff;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+.cart-item img {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.cart-item-info {
+    flex: 1;
+    min-width: 0;
+}
+.cart-item-info h6 {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.cart-item-info p {
+    margin: 0;
+    color: var(--palm-green);
+    font-size: 12px;
+}
+.cart-quantity {
+    border: 0;
+    background: none;
+    color: var(--crimson-red);
+}
+.remove-cart {
+    border: 0;
+    background: transparent;
+    color: var(--crimson-red);
+    cursor: pointer;
+}
+
+/* === FOOTER SECTION === */
+.island-footer {
+    padding: 65px 0 25px;
+    background: #210B3D;
+    color: #fff;
+}
+.island-footer h4 {
+    color: var(--sunny-yellow);
+    font-size: 21px;
+}
+.island-footer h5 {
+    margin-bottom: 18px;
+    color: var(--tropical-teal);
+    font-size: 14px;
+}
+.island-footer p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 12px;
+}
+.island-footer .col-md-4 > a {
+    display: block;
+    margin: 9px 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    transition: color 0.25s ease;
+}
+.island-footer a:hover {
+    color: var(--sunny-yellow);
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-links a {
+    color: #fff;
+    font-size: 21px;
+}
+.island-footer hr,
+.island-fooder hr {
+    margin: 35px 0 20px;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.copyright {
+    font-size: 10px !important;
+    text-align: center;
+}
+
+/* === PAGE TRANSITIONS main.js adds body.page-leaving before navigation. === */
+@keyframes islandPageEnter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body.page-leaving {
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+}
+
+/* === RESPONSIVE DESIGN === */
+/* TABLETS AND SMALLER LAPTOPS */
+@media (max-width: 991.98px) {
+    .island-navbar {
+        padding: 14px 0;
+    }
+    .navbar-nav {
+        padding-top: 15px;
+    }
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+    .cart-nav-btn {
+        margin-top: 10px;
+    }
+    .section-padding {
+        padding: 75px 0;
+    }
+}
+
+/* TABLETS AND MOBILE */
+@media (max-width: 768px) {
+    :root {
+        --hero-video-position: 50% 40%;
+    }
+    .hero-section {
+        min-height: 88vh;
+        min-height: 88svh;
+    }
+    .hero-section .hero-video {
+        object-position: var(--hero-video-position);
+    }
+    .hero-section .hero-content {
+        padding: 125px 18px 105px;
+    }
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    .hero-section .scroll-indicator {
+        bottom: 12px;
+    }
+
+}
+
+/* MOBILE PHONES */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 17px;
+    }
+    .hero-title {
+        margin: 22px 0;
+        line-height: 0.95;
+        letter-spacing: 1px;
+    }
+    .forgotten-word {
+        font-size: clamp(2.8rem, 13vw, 5rem);
+        -webkit-text-stroke: 0.7px rgba(255, 130, 255, 0.8);
+    }
+    .island-word {
+        font-size: clamp(3rem, 14vw, 5rem);
+        -webkit-text-stroke: 0.7px rgba(255, 130, 255, 0.8);
+    }
+    .hero-description {
+        font-size: 14px;
+    }
+    .hero-section .scroll-indicator {
+        display: none;
+    }
+    .inner-hero,
+    .inner-herp {
+        min-height: 55vh;
+        padding: 125px 15px 55px;
+    }
+    .inner-hero h1,
+    .inner-herp h1 {
+        font-size: 40px;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .character-img,
+    .character-image {
+        height: 260px;
+    }
+    .character-content,
+    .character-cntent {
+        padding: 20px;
+    }
+    .product-card > img {
+        height: 145px;
+    }
+    .product-info {
+        padding: 12px;
+    }
+    .product-info h5 {
+        font-size: 12px;
+    }
+    .product-bottom strong {
+        font-size: 12px;
+    }
+    .add-cart {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* DESKTOP NAVIGATION */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* === ACCESSIBILITY - REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        animation: none !important;
+        transition: none !important;
+    }
+    body.page-leaving {
+        opacity: 1;
+        transform: none;
+    }
+    .hero-video {
+        display: none;
+    }
+    .hero-section {
+        background-image:
+            linear-gradient(
+                rgba(16, 7, 36, 0.45),
+                rgba(16, 7, 36, 0.72)
+            ),
+            url('../../media/img/poster.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    .character-card,
+    .product-card,
+    .highlight-card,
+    .btn {
+        transition: none !important;
+    }
+}
+
+/* === HOMEPAGE - CINEMATIC BACKGROUND IMAGES === */
+/* 1. MOVIE INFORMATION BACKGROUND IMAGE & LAVENDER DUSK BG COLOR */
+#movie-info {
+    position: relative;
+    background-color: var(--lavender-dusk);
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(185, 161, 232, 0.78),
+            rgba(185, 161, 232, 0.86)
+        ),
+        url("../../media/img/backgrounds/movie-information.jpg");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+/* Improve text readability */
+#movie-info .section-heading h2,
+#movie-info .container h3 {
+    color: #261A35;
+}
+#movie-info .section-heading p,
+#movie-info .container > p {
+    color: #352747;
+}
+
+/* 2. HIGHLIGHTS BACKGROUND */
+.highlight-section {
+    position: relative;
+    background-color: #10352E;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(12, 25, 51, 0.62),
+            rgba(20, 15, 55, 0.55),
+            rgba(10, 35, 55, 0.68)
+        ),
+        url("../../media/img/backgrounds/highlights-background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+/* Highlight heading */
+.highlight-section .section-heading h2 {
+    color: #FFFFFF;
+}
+.highlight-section .section-heading p {
+    color: rgba(255, 255, 255, 0.88);
+}
+/* Highlight cards */
+.highlight-section .highlight-card {
+    background: rgba(20, 15, 50, 0.48);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* 3. SYNOPSIS BACKGROUND */
+#synopsis {
+    position: relative;
+    background-color: #105B82;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(11, 25, 55, 0.76) 0%,
+            rgba(16, 35, 75, 0.63) 50%,
+            rgba(30, 12, 58, 0.70) 100%
+        ),
+        url("../../media/img/backgrounds/synopsis-background.jpg");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+/* Synopsis text */
+#synopsis h2 {
+    color: #FFFFFF;
+}
+#synopsis p {
+    color: rgba(255, 255, 255, 0.90) !important;
+}
+/* Synopsis button */
+#synopsis .btn-sunset {
+    position: relative;
+    z-index: 2;
+}
+
+/* === RESPONSIVE BACKGROUND POSITIONING === */
+@media (max-width: 768px) {
+    #movie-info {
+        background-position: center center;
+    }
+    .highlight-section {
+        background-position: 48% center;
+    }
+    #synopsis {
+        background-position: 52% center;
+    }
+    .character-hero {
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    .shop-hero {
+        background-position: center center;
+        background-attachment: scroll;
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #movie-info,
+    .highlight-section,
+    #synopsis {
+        background-attachment: scroll;
+    }
+}
+
+/* === FORGOTTEN ISLAND - SEAMLESS VERTICAL TRANSITIONS === */
+/* Base section configuration */
+section.section-padding {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+/* Gradient overlay at the beginning of each section */
+section.section-padding::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        var(--section-blend-from, transparent) 0%,
+        color-mix(
+            in srgb,
+            var(--section-blend-from, transparent) 40%,
+            transparent
+        ) 30%,
+        transparent 100%
+    ) !important;
+}
+/* Keep all section content above the gradient */
+section.section-padding > .container {
+    position: relative;
+    z-index: 2;
+}
+/* Remove old horizontal divider effects */
+section.section-padding::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* === HOMEPAGE TRANSITIONS === */
+/* Movie Information -> Highlights, Lavender Dusk -> Portal Background */
+#movie-info + .highlight-section {
+    --section-blend-from: #B9A1E8;
+}
+/* Highlights -> Synopsis, Dark portal image -> Friendship background */
+#synopsis {
+    --section-blend-from: #0B1835;
+}
+/* Synopsis -> Voice Cast, Dark blue image -> Next section background */
+#synopsis + section.section-padding {
+    --section-blend-from: #0B2A50;
+}
+/* Production Credits -> Cinema */
+.credits-section + #cinema {
+    --section-blend-from: #F7DCEB;
+}
+
+/* === CHARACTERS PAGE TRANSITIONS === */
+/* Character banner -> Introduction */
+.inner-hero + .sand-section,
+.inner-herp + .sand-section {
+    --section-blend-from: #241044;
+}
+/* Introduction -> Protagonists */
+.sand-section + .character-section {
+    --section-blend-from: #FFF1D6;
+}
+/* Protagonists -> Antagonists */
+.character-section + .antagonist-section {
+    --section-blend-from: #241044;
+}
+
+/* === PRODUCTS PAGE TRANSITIONS === */
+/* Shop introduction -> Product collection */
+.sand-section + .product-section {
+    --section-blend-from: #FFF1D6;
+}
+
+/* === RESPONSIVE TRANSITIONS === */
+@media (max-width: 768px) {
+    section.section-padding::before {
+        height: 320px;
+    }
+}
+
+/* === VOICE CAST - PORTRAIT CARDS === */
+.voice-cast-section {
+    position: relative;
+}
+/* Cast card */
+.voice-cast-section .cast-card {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(185, 161, 232, 0.45);
+    border-bottom: 4px solid var(--tropical-teal);
+    border-radius: 16px;
+    box-shadow:
+        0 8px 25px rgba(50, 16, 91, 0.10);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+/* Hover effect */
+.voice-cast-section .cast-card:hover {
+    transform: translateY(-9px);
+    border-bottom-color: var(--tropical-pink);
+    box-shadow:
+        0 16px 32px rgba(50, 16, 91, 0.18);
+}
+/* Actor portrait */
+.cast-image {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        var(--lavender-dusk),
+        var(--deep-purple)
+    );
+}
+/* Image styling */
+.cast-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+/* Image hover */
+.cast-card:hover .cast-image img {
+    transform: scale(1.06);
+}
+/* Actor information */
+.cast-info {
+    padding: 20px 12px 22px;
+    text-align: center;
+}
+/* Actor name */
+.cast-info h5 {
+    margin-bottom: 7px;
+    color: var(--deep-purple);
+    font-size: 15px;
+    font-weight: 800;
+}
+/* Character name */
+.cast-info p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .cast-image {
+        height: 190px;
+    }
+    .cast-info {
+        padding: 15px 8px 18px;
+    }
+    .cast-info h5 {
+        font-size: 13px;
+    }
+    .cast-info p {
+        font-size: 11px;
+    }
+}
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .voice-cast-section .cast-card,
+    .cast-image img {
+        transition: none;
+    }
+
+}
+
+/* === CHARACTERS PAGE - MATCHING SECTION BACKGROUNDS === */
+/* Shared vertical gradient */
+.other-inhabitants-section,
+.family-section {
+    position: relative;
+    background-color: #FFF1D6 !important;
+    background-image: linear-gradient(
+        to bottom,
+        #94899B 0%,
+        #B9ACB8 30%,
+        #DED0CD 65%,
+        #FFF1D6 100%
+    ) !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+/* SECTION HEADINGS */
+.other-inhabitants-section .section-heading h2,
+.other-inhabitants-section .section-heading p,
+.family-section .section-heading h2,
+.family-section .section-heading p {
+    color: #261A35 !important;
+}
+/* Maintain turquoise section labels */
+.other-inhabitants-section .section-tag,
+.family-section .section-tag {
+    color: #12B8AD;
+}
+/* Keep character cards white */
+.other-inhabitants-section .character-card,
+.family-section .character-card {
+    background: #FFFFFF;
+}
+/* Responsive background */
+@media (max-width: 768px) {
+    .other-inhabitants-section,
+    .family-section {
+        background-position: center;
+    }
+}
+
+/* === ANTAGONIST IMAGE - FULL ORIGINAL PROPORTIONS === */
+/* Image container */
+.villain-card .character-img {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    overflow: hidden;
+    background: transparent;
+}
+/* Display the complete Manang image */
+.villain-card .character-img img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    transform: none !important;
+}
+/* Prevents from cropping on hover */
+.villain-card:hover .character-img img {
+    transform: none !important;
+}
+/* Keep antagonist label positioned correctly */
+.villain-card .character-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+/* === JO AND RAISSA - FULL ORIGINAL IMAGE SIZE === */
+/* Protagonist image containers */
+.character-section:not(.other-inhabitants-section) .character-img {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    overflow: hidden;
+    background: transparent;
+}
+.character-section:not(.other-inhabitants-section) .character-img img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: none !important;
+}
+.character-section:not(.other-inhabitants-section) .character-img img.raissa-character-photo {
+    aspect-ratio: 760 / 1154;
+    object-fit: fill;
+}
+/* Prevent image zoom and cropping on hover */
+.character-section:not(.other-inhabitants-section) .character-card:hover .character-img img {
+    transform: none !important;
+}
+/* Keep protagonist labels positioned correctly */
+.character-section:not(.other-inhabitants-section) .character-label {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+}

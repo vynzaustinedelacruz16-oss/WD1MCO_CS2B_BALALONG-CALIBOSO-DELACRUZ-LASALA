@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Island Shop | Forgotten Island </title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="rsc/css/styles.css">
+    </head>
+
+    <body>
+        <!-- NAVBAR SECTION -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top island-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    FORGOTTEN<span> ISLAND</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html"> Home </a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#cinema"> Cinema </a></li>
+                        <li class="nav-item"><a class="nav-link" href="characters.html"> Characters </a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"> Products </a></li>
+                        <li class="nav-item ms-lg-3">
+                            <button class="cart-nav-btn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+                                <i class="bi bi-bag-fill"></i> CART (<span id="cart-count">0</span>)
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- HERO -->
+        <header class="inner-hero shop-hero">
+            <div class="container text-center">
+                <span class="section-tag"> THE OFFICIAL COLLECTION </span>
+                <h1> THE ISLAND SHOP </h1>
+                <p> Bring a piece of Nakali into your everyday life. </p>
+                <a href="#shop" class="btn btn-sunset mt-3"> SHOP COLLECTION </a>
+            </div>
+        </header>
+        
+        <!-- SHOP INTRO -->
+        <section class="section-padding sand-section">
+            <div class="container text-center">
+                <span class="section-tag"> COLLECT YOUR FAVORITES </span>
+                <h2> EXPLORE THE COLLECTION </h2>
+                <p class="content-width mx-auto">
+                    Discover our collection of Forgotten Island-inspired
+                    collectibles, accessories, apparel, and souvenirs.
+                </p>
+            </div>
+        </section> 
+
+        <!-- PRODUCTS -->
+        <section id="shop" class="section-padding product-section">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+                    <div>
+                        <span class="section-tag"> MERCHANDISE </span>
+                        <h2> ISLAND COLLECTION </h2>
+                    </div>
+
+                    <button class="btn btn-purple" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+                        <li class="bi bi-cart3"></li>
+                        View My Cart
+                    </button>
+                </div>
+                
+                <div class="row  g-4">
+
+                    <!-- PRODUCT 1 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-01.jpg" alt="Jo collectible figure">
+                            <div class="product-info">
+                                <span class="product-category"> COLLECTIBLES </span>
+                                <h5> Jo Pop Mart Collectible Figure </h5>
+                                <p> Bring Jo's adventurous personality to life with
+                                    this adorable collectible figure. Featuring her
+                                    signature look, it is a must-have for fans and
+                                    collectors.    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱850.00 </strong>
+                                    <button class="add-cart" data-id="1" data-name="Jo Collectible Figure"
+                                        data-price="850" data-img="media/img/products/product-01.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 2 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-02.jpg" alt="Raissa collectible figure">
+                            <div class="product-info">
+                                <span class="product-category"> COLLECTIBLES </span>
+                                <h5> Raissa Pop Mart Collectible Figure </h5>
+                                <p> Celebrate Raissa's charm and adventurous spirit
+                                    this detailed collectible figure. A lovely addition
+                                    to any Forgotten Island collection.                                    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱850.00 </strong>
+                                    <button class="add-cart" data-id="2" data-name="Raissa Collectible Figure"
+                                        data-price="850" data-img="media/img/products/product-02.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- PRODUCT 3 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-03.jpg" alt="Raww plush toy">
+                            <div class="product-info">
+                                <span class="product-category"> PLUSH TOYS </span>
+                                <h5> Raww Plushie </h5>
+                                <p> Meet your new cuddly companion! This soft and
+                                    adorable Raww-inspired plushie is perfect for
+                                    hugs, display, and everyday advetures.
+                                 </p>
+                                <div class="product-bottom">
+                                    <strong> ₱650.00 </strong>
+                                    <button class="add-cart" data-id="3" data-name="Raww Plushie"
+                                        data-price="650" data-img="media/img/products/product-03.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 4 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-04.jpg" alt="Forgotten Island T-shirt">
+                            <div class="product-info">
+                                <span class="product-category"> APPAREL </span>
+                                <h5> Island Graphic T-Shirt </h5>
+                                <p> Show your love for Forgotten Island with this stylish 
+                                    graphic T-shirt featuring an island-inspired design.
+                                    Perfect for casual outfits and movie fans.                                    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱499.00 </strong>
+                                    <button class="add-cart" data-id="4" data-name="Island Graphic T-shirt"
+                                        data-price="499" data-img="media/img/products/product-04.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 5 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-05.jpg" alt="Forgotten island friendship bracelet">
+                            <div class="product-info">
+                                <span class="product-category"> ACCESSORIES </span>
+                                <h5> FORGOTTEN ISLAND FRIENDSHIP BRACELET </h5>
+                                <p> Celebrate the magic of friendship with the Forgotten
+                                    Island Friendship Bracelet! Inspired by Jo and Raissa's
+                                    unforgettable bond, this charming accessory is a
+                                    reminder that true friendships remain stronf through
+                                    every adventure. A perfect keepsake for fans of
+                                    Forgotten Island and a thoughtful gift to share with
+                                    your best friend.
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱299.00 </strong>
+                                    <button class="add-cart" data-id="5" data-name="Friendship Bracelet"
+                                        data-price="299" data-img="media/img/products/product-05.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCT 6 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-06.jpg" alt="Forgotten Island poster">
+                            <div class="product-info">
+                                <span class="product-category"> WALL ART </span>
+                                <h5> Movie Poster Print </h5>
+                                <p> Bring the magical world of Nakali into your space
+                                    with this Forgotten Island movie poster print. A
+                                    perfect decorative piece for your bedroom, study
+                                    area, or collection.
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱350.00 </strong>
+                                    <button class="add-cart" data-id="6" data-name="Forgotten Island Poster"
+                                        data-price="350" data-img="media/img/products/product-06.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 7 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-07.jpg" alt="Island tote bag">
+                            <div class="product-info">
+                                <span class="product-category"> BAGS </span>
+                                <h5> Island Canvas Tote Bag </h5>
+                                <p> Carry your everyday essentials with this reusable
+                                    Forgotten Island canvas tote bag. Combining
+                                    practically with a fun island-inspired design.
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱350.00 </strong>
+                                    <button class="add-cart" data-id="7" data-name="Island Canvas Tote Bag"
+                                        data-price="350" data-img="media/img/products/product-07.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 8 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-08.jpg" alt="Island coloring book">
+                            <div class="product-info">
+                                <span class="product-category"> ART STATIONERY </span>
+                                <h5> Adventure Coloring Book </h5>
+                                <p> Explore your creativity with this Forgotten Island
+                                    coloring book, filled with fun illustrations inspired
+                                    by the characters and magical world of Nakali.
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱180.00 </strong>
+                                    <button class="add-cart" data-id="8" data-name="Adventure Coloring Book"
+                                        data-price="180" data-img="media/img/products/product-08.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 9 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-09.jpg" alt="Island mug">
+                            <div class="product-info">
+                                <span class="product-category"> DRINKWARE </span>
+                                <h5> Forgotten Island Mug </h5>
+                                <p> Enjoy your favorite drinks with this charming
+                                    Forgotten Island mug. Featuring movie-inspired
+                                    artwork, it is perfect for home, school, or
+                                    office use.
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱320.00 </strong>
+                                    <button class="add-cart" data-id="9" data-name="Forgotten Island Mug"
+                                        data-price="320" data-img="media/img/products/product-09.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 10 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-10.jpg" alt="Island sticker pack">
+                            <div class="product-info">
+                                <span class="product-category"> ACCESSORIES </span>
+                                <h5> Forgotten Island Character Sticker Pack </h5>
+                                <p> Add a touch of Nakali to your notebooks, gadgets, 
+                                    and personal belongings with this collection of 
+                                    colorful character-inspired stickers.                                    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱120.00 </strong>
+                                    <button class="add-cart" data-id="10" data-name="Character Sticker Pack"
+                                        data-price="120" data-img="media/img/products/product-10.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 11 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-11.jpg" alt="Island bucket hat">
+                            <div class="product-info">
+                                <span class="product-category"> APPAREL </span>
+                                <h5> Tropical Bucket Hat </h5>
+                                <p> Complete your island-inspired look with this 
+                                    stylish tropical bucket hat. A fun and comfortable 
+                                    accessory for sunny days and outdoor adventures.                                    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱399.00 </strong>
+                                    <button class="add-cart" data-id="11" data-name="Tropical Bucket Hat"
+                                        data-price="399" data-img="media/img/products/product-11.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PRODUCT 12 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="product-card">
+                            <img src="media/img/products/product-12.jpg" alt="Island collector box">
+                            <div class="product-info">
+                                <span class="product-category"> COLLECTOR's ITEMS </span>
+                                <h5> Island Mystery Box </h5>
+                                <p> Discover a little surprise from Nakali! This 
+                                    mystery box contains a selection of Forgotten 
+                                    Island-inspired goodies, making every unboxing 
+                                    a magical adventure.                                    
+                                </p>
+                                <div class="product-bottom">
+                                    <strong> ₱1,250.00 </strong>
+                                    <button class="add-cart" data-id="12" data-name="Island Mystery Box"
+                                        data-price="1250" data-img="media/img/products/product-12.jpg">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                </div>
+            </div>
+        </section>
+        
+        <div class="cart-toast" id="cartToast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+        <!-- CART PANEL -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel">
+            <div class="offcanvas-header cart-header">
+                <h5 class="offcanvas-title"> MY SHOPPING CART </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div id="cart-items">
+                    <p class="text-center text-secondary"> Your cart is empty. </p>
+                </div>
+
+                <hr>
+
+                <div class="d-flex justify-content-between">
+                    <h5> Total: </h5>
+                    <h5 id="cart-total"> ₱0.00 </h5>
+                </div>
+
+                <button class="btn btn-sunset w-100 mt-3" id="checkout-btn">
+                    PROCEED TO CHECKOUT
+                </button>
+
+                <button class="btn btn-outline-danger w-100 mt-2" id="clear-cart">
+                    CLEAR CART
+                </button>
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <footer class="island-footer">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <h4> FORGOTTEN ISLAND </h4>
+                        <p> Your best friendship is worth fighting for. </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/DreamwWorksAnimation/">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dreamworks/">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@DreamWorks">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h5> DEVELOPED BY </h5>
+                        <p> WD1 Team Members </p>
+                        <p> Forgotten Island Website Project </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h5> EXPLORE </h5>
+                        <a href="index.html"> Home </a>
+                        <a href="index.html#cinema"> Cinema </a>
+                        <a href="characters.html"> Characters </a>
+                        <a href="products.html"> Products </a>
+                    </div>
+                </div>
+
+                <hr>
+                <p class="copyright">
+                    © 2026 Forgotten Island Fan Promotional Website.
+                    Educational project.
+                </p>
+            </div>
+        </footer> 
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="rsc/js/main.js"></script>
+        <script src="rsc/js/cart.js"></script>
+    </body>
+</html>
